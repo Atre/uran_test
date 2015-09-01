@@ -17,8 +17,12 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
-    },
+        "yiisoft/yii2-swiftmailer": "*",
+        "bower-asset/angular": "*",
+        "bower-asset/angular-route": "*",
+        "bower-asset/angular-strap": "*",
+        "bower-asset/angular-resource": "*"
+        },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
