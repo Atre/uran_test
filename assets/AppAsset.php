@@ -21,7 +21,12 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
+        'js/libs/angular-recursion.js',
         'js/app.js',
+        'js/controllers.js',
+        'js/services.js',
+        'js/directives.js',
+        'js/interface.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

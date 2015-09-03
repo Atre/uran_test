@@ -1,0 +1,20 @@
+<!--Header-->
+<p ng-click="toggleMenu($event, family.type)">{{ family.name }}
+    <span data-id="{{family.id}}" data-type="{{family.type}}" data-category-control style="display: none">
+        <span ng-if="family.type == 'category'" ng-click="addCategory($event, family.id)" class="glyphicon glyphicon-plus-sign"
+              aria-hidden="true" data-toggle="modal" data-placement="top" title="Add new category"
+              data-target="#catModal"></span>
+        <span ng-if="family.type == 'category'" ng-click="addElement($event, family.id)" class="glyphicon glyphicon-plus" aria-hidden="true"
+              data-toggle="modal" data-placement="top" title="Add new element" data-target="#myModal"></span>
+        <span ng-click="removeElement($event, family.type, family.id)" class="glyphicon glyphicon-minus" aria-hidden="true"
+              data-toggle="tooltip" data-placement="top" title="Remove"></span>
+    </span>
+</p>
+<!--Body-->
+<button data-id="{{family.id}}" ng-if="family.type === 'entry'" ng-click="showContents($event, family.type, family.id)" class="btn">Show entry</button>
+<div class="list-group" data-collapsable>
+    <button ng-mouseenter="menuDisplay($event)" ng-mouseleave="menuDisplay($event)" type="button"
+            ng-repeat="child in family.items"  class="list-group-item" >
+        <tree family="child"></tree>
+    </button>
+</div>
